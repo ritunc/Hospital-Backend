@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
-const PORT = process.env.PORT || 8009;
+const PORT = process.env.PORT;
 const { connectionMongodb } = require('./conection/connect')
 const { userLoginrestriction } = require("./middlewareAuth/authmiddleware");
 const fileupload = require('express-fileupload');
