@@ -43,7 +43,10 @@ app.use("/medDelete", USERrouter);
 // app.use("/workerget", userLoginrestriction, USERrouter);
 
 
-
+app.get("/", (req, res) => {
+        console.log('Hello');
+        res.write('Hello Sir');
+})
 
 
   
