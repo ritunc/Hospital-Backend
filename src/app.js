@@ -12,10 +12,10 @@ const cors = require("cors");
 // const path = require("path");
 
 //Route--
-const USERrouter = require("../routers/router");
-// const USERrouter = require("./routers/router");
-const authrouter = require("../routers/authrouter");
-// const authrouter = require("./routers/authrouter");
+// const USERrouter = require("../routers/router");
+const USERrouter = require("./routers/router");
+// const authrouter = require("../routers/authrouter");
+const authrouter = require("./routers/authrouter");
 
 
 //Data-base connection---

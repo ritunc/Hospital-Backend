@@ -1,4 +1,5 @@
-const adminCookie = require("../src/models/sessionIDauthmodel")
+// const adminCookie = require("../src/models/sessionIDauthmodel");
+const adminCookie = require("../models/sessionIDauthmodel");
 
 const userLoginrestriction = async (req, res, next) => {
         console.log('check');

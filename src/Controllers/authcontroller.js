@@ -1,4 +1,5 @@
-const adminUser = require('../src/models/authmodel');
+// const adminUser = require('../src/models/authmodel');
+const adminUser = require('../models/authmodel');
 const { v4: uuidv4 } = require('uuid');
 
 const { setAdmin, adminVerification, adminLogOut } = require('../authSessionID/authSessionId');

@@ -1,4 +1,5 @@
-const adminCookie = require('../src/models/sessionIDauthmodel');
+// const adminCookie = require('../src/models/sessionIDauthmodel');
+const adminCookie = require('../models/sessionIDauthmodel');
 
 
 const setAdmin = async (id, user) => {
