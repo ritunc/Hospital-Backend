@@ -4,7 +4,8 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3000;
 const { connectionMongodb } = require('./conection/connect')
-const { userLoginrestriction } = require("../middlewareAuth/authmiddleware");
+// const { userLoginrestriction } = require("../middlewareAuth/authmiddleware");
+const { userLoginrestriction } = require("./middlewareAuth/authmiddleware");
 const fileupload = require('express-fileupload');
 const cors = require("cors");
 
@@ -12,7 +13,9 @@ const cors = require("cors");
 
 //Route--
 const USERrouter = require("../routers/router");
+// const USERrouter = require("./routers/router");
 const authrouter = require("../routers/authrouter");
+// const authrouter = require("./routers/authrouter");
 
 
 //Data-base connection---
