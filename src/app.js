@@ -4,15 +4,15 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3000;
 const { connectionMongodb } = require('./conection/connect')
-const { userLoginrestriction } = require("./middlewareAuth/authmiddleware");
+const { userLoginrestriction } = require("../middlewareAuth/authmiddleware");
 const fileupload = require('express-fileupload');
 const cors = require("cors");
 
 // const path = require("path");
 
 //Route--
-const USERrouter = require("./routers/router");
-const authrouter = require("./routers/authrouter");
+const USERrouter = require("../routers/router");
+const authrouter = require("../routers/authrouter");
 
 
 //Data-base connection---
@@ -56,3 +56,4 @@ app.get("/", (req, res) => {
 
 
 app.listen(PORT, () => console.log(`Server is running on PORT:${PORT}`));
+export default app;

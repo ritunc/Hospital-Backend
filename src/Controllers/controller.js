@@ -1,4 +1,4 @@
-const workerUser = require('../models/model');
+const workerUser = require('../src/models/model');
 
 // const fileupload = require('express-fileupload');
 // const cors = require("cors");
