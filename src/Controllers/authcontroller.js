@@ -52,7 +52,13 @@ const handleUserLogin = (async (req, res) => {
                 setAdmin(sessionID, user);
                 console.log("Uuid is created:", sessionID);
                         
-                res.cookie('Uid', sessionID);
+                res.cookie('Uid', sessionID, {
+                        expires: new Date(Date.now() + 86400000), 
+                        path: '/api', 
+                        domain: 'https://hospital-patient.vercel.app', 
+                        secure: true,
+                        httpOnly: true,
+                });
 
               
                 return res.json({message:"LogIn successfully"});
