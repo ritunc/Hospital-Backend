@@ -56,7 +56,7 @@ const handleUserLogin = (async (req, res) => {
                        return res.cookie('Uid', sessionID);
 
                 }
-                return res.json({message:"LogIn successfully"});
+                // return res.json({message:"LogIn successfully"});
         }
 });
 
