@@ -53,10 +53,10 @@ const handleUserLogin = (async (req, res) => {
                 if(sessionID){
                         console.log("Uuid is created");
                         
-                       return res.cookie('Uid', sessionID);
+                       return res.cookies('Uid', sessionID);
 
                 }
-                // return res.json({message:"LogIn successfully"});
+                return res.json({message:"LogIn successfully"});
         }
 });
 
