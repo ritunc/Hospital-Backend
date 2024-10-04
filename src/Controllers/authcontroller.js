@@ -55,7 +55,7 @@ const handleUserLogin = (async (req, res) => {
                 res.cookie('Uid', sessionID, {
                         expires: new Date(Date.now() + 86400000), 
                         path: '/api', 
-                        domain: 'https://hospital-patient.vercel.app', 
+                        domain: 'https://hospital-backend-ecru.vercel.app', 
                         secure: true,
                         httpOnly: true,
                 });
