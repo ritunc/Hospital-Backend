@@ -50,7 +50,7 @@ const handleUserLogin = (async (req, res) => {
         } else {
                 const sessionID = uuidv4();
                 setAdmin(sessionID, user);
-                res.cookie('Uid', sessionID);
+                res.cookies('Uid', sessionID);
                 return res.json({message:"LogIn successfully"});
         }
 });
