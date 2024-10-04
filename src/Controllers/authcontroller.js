@@ -50,8 +50,13 @@ const handleUserLogin = (async (req, res) => {
         } else {
                 const sessionID = uuidv4();
                 setAdmin(sessionID, user);
-                res.cookies('Uid', sessionID);
-                return [res.json({message:"LogIn successfully"}), res.cookie('Uid', sessionID)];
+                if(sessionID){
+                        console.log("Uuid is created");
+                        
+                       return res.cookie('Uid', sessionID);
+
+                }
+                return res.json({message:"LogIn successfully"});
         }
 });
 
