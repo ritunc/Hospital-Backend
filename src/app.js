@@ -19,7 +19,7 @@ const authrouter = require("./routers/authrouter");
 
 
 //Data-base connection---
-connectionMongodb(process.env.MONGO_URL || 'mongodb+srv://ritunC:goodfriday123##@hospital-data.wnc1l.mongodb.net/Hospital_Data?retryWrites=true&w=majority&appName=Hospital-data');
+connectionMongodb('mongodb+srv://ritunC:goodfriday123##@hospital-data.wnc1l.mongodb.net/Hospital_Data?retryWrites=true&w=majority&appName=Hospital-data');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
