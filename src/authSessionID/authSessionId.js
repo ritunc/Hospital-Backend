@@ -9,6 +9,7 @@ const setAdmin = async (id, user) => {
                 email: email,
                 password:password,
         });
+        console.log('cookie, email and password is created')
 };
 
 const adminVerification = async(user, uuid) => {
