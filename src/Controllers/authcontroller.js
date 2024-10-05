@@ -53,7 +53,7 @@ const handleUserLogin = (async (req, res) => {
                 console.log("Uuid is created:", sessionID);
                         
                 // return res.cookie('Uid', sessionID).json({message:"LogIn successfully"});
-                
+
                 return res.json({message:"LogIn successfully",Uid:sessionID});
 
                 // res.cookie('myCookie', 'cookieValue', {
@@ -73,7 +73,7 @@ const handleUserlogOut = async (req, res) => {
         const cookies = req.cookies?.Uid;
         await adminLogOut(cookies);
         res.clearCookie("Uid");
-        res.json({message:"Opps!!! You Logd-Out", path:"/search"});
+        res.json({message:"Opps!!! You Logd-Out", path:"/"});
 }
 
 module.exports = {
