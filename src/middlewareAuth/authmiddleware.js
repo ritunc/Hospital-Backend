@@ -20,7 +20,7 @@ const userLoginrestriction = async (req, res, next) => {
 const handleGetworkerDatarestriction = async (req, res, next) => {
         console.log("Worker Data check");
 
-        const uuid = req.cookies?.Uid;
+        const uuid = req.cookie?.Uid;
         console.log("cookie",uuid);
         
         const CookieData = await adminCookie.findOne({uuid});
