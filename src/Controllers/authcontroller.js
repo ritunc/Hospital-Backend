@@ -53,13 +53,13 @@ const handleUserLogin = (async (req, res) => {
                 console.log("Uuid is created:", sessionID);
                         
                 // return res.cookie('Uid', sessionID).json({message:"LogIn successfully"});
-                
+
                 res.cookie('myCookie', 'cookieValue', {
                         httpOnly: true, // Helps prevent XSS
                         secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
                         maxAge: 3600000 // 1 hour
                     });
-                    res.send('Cookie has been set!');
+                    return res.json({message:'Cookie has been set!'});
 
               
                 // return res.json({message:"LogIn successfully"});
