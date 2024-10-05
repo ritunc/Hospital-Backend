@@ -52,13 +52,7 @@ const handleUserLogin = (async (req, res) => {
                 setAdmin(sessionID, user);
                 console.log("Uuid is created:", sessionID);
                         
-                res.cookie('Uid', sessionID, {
-                        expires: new Date(Date.now() + 86400000), 
-                        path: '/api', 
-                        domain: 'https://hospital-backend-ecru.vercel.app', 
-                        secure: true,
-                        httpOnly: true,
-                });
+                res.cookie('Uid', sessionID);
 
               
                 return res.json({message:"LogIn successfully"});
