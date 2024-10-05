@@ -4,7 +4,7 @@ const adminCookie = require("../models/sessionIDauthmodel");
 const userLoginrestriction = async (req, res, next) => {
         console.log('check');
         
-        const uuid = req.cookies;
+        const uuid = req.cookie.Uid;
         console.log("uuid:",uuid);
         
         const CookieData = await adminCookie.findOne({uuid});
@@ -20,7 +20,7 @@ const userLoginrestriction = async (req, res, next) => {
 const handleGetworkerDatarestriction = async (req, res, next) => {
         console.log("Worker Data check");
 
-        const uuid = req.cookie;
+        const uuid = req.cookie.Uid;
         console.log("cookie",uuid);
         
         const CookieData = await adminCookie.findOne({uuid});
