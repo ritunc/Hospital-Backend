@@ -6,8 +6,8 @@ const { handleSearchValid, handleUserCreateValid, handleUserCreateImage, handleU
 
 
 
-router.get("/searchValid", handleSearchValid);
-router.get("/userCreater", handleUserCreateValid);
+router.post("/searchValid", handleSearchValid);
+router.post("/userCreater", handleUserCreateValid);
 router.get("/workerValid", handleWorkerValid);
 router.get('/editworkerValid', handleEditWorker)
 
@@ -25,7 +25,7 @@ router.get("/DeleteWorker/:hours", handleDeleteWorker);
 
 
 //Search route--- but from Profile--
-router.get('/workerData/:param', handleGetworkerDatarestriction,  handleWorkerData);
+router.post('/workerData/:param', handleGetworkerDatarestriction,  handleWorkerData);
 
 // router.post("/userCreate", upload.single('Userimage'), (req, res) => {
 //         const body = req.body;
