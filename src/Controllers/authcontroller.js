@@ -78,6 +78,7 @@ const handleUserLogin = (async (req, res) => {
 
 const handleUserlogOut = async (req, res) => {
         const auth_datas = req.body[0];
+        console.log("logout-data:", auth_data);
         console.log("auth_datasss:", auth_datas);
         await adminLogOut(auth_datas);
         // res.clearCookie("Uid");
