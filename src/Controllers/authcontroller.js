@@ -38,7 +38,7 @@ const handleUserLogin = (async (req, res) => {
 
         console.log("auth_data:", req.body[1]);
         
-        const userAdminCookie = req.cookies.Uid;
+        const userAdminCookie = req.body[1];
         
         // if( !email || !password ) return res.status(400).json({message: "Please fill the form"});
         
