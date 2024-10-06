@@ -77,10 +77,10 @@ const handleUserLogin = (async (req, res) => {
 
 
 const handleUserlogOut = async (req, res) => {
-        const cookies = req.cookies?.Uid;
+        const cookies = req.body[0];
         await adminLogOut(cookies);
-        res.clearCookie("Uid");
-        res.json({message:"Opps!!! You Logd-Out", path:"/"});
+        // res.clearCookie("Uid");
+        res.json({message:"Opps!!! You Logd-Out", path:"/search"});
 }
 
 module.exports = {
