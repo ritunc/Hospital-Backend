@@ -34,7 +34,7 @@ const handleSignUpform = async (req, res) => {
 const handleUserLogin = (async (req, res) => {
         console.log("bodyss:",req.body[0], req.body[1]);
         
-        const { email, password, auth_data } = req.body;
+        const { email, password, auth_data } = req.body[0];
 
         console.log("auth_data:", auth_data);
         
