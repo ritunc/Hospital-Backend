@@ -3,7 +3,7 @@ const adminCookie = require("../models/sessionIDauthmodel");
 
 const userLoginrestriction = async (req, res, next) => {
         console.log('check');
-        const { auth_datas } = req.body;
+        const auth_datas = req.body[0];
         console.log("auth_datass:", auth_datas);
          
         const uuid = auth_datas;
