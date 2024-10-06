@@ -77,8 +77,8 @@ const handleUserLogin = (async (req, res) => {
 
 
 const handleUserlogOut = async (req, res) => {
-        const cookies = req.body[0];
-        await adminLogOut(cookies);
+        const auth_datas = req.body[0];
+        await adminLogOut(auth_datas);
         // res.clearCookie("Uid");
         res.json({message:"Opps!!! You Logd-Out", path:"/search"});
 }
