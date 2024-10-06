@@ -32,7 +32,7 @@ const handleSignUpform = async (req, res) => {
 
 
 const handleUserLogin = (async (req, res) => {
-        const { email, password, auth_data } = req.body;
+        const { email, password } = req.body;
 
         console.log("auth_data:",req.body.auth_data);
         
