@@ -32,7 +32,10 @@ const handleSignUpform = async (req, res) => {
 
 
 const handleUserLogin = (async (req, res) => {
-        const { email, password } = req.body;
+        const { email, password, auth_data } = req.body;
+        
+        console.log("auth_data:",auth_data);
+        
         const userAdminCookie = req.cookies.Uid;
         
         // if( !email || !password ) return res.status(400).json({message: "Please fill the form"});
