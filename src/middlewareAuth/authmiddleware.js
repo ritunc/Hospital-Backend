@@ -21,7 +21,7 @@ const userLoginrestriction = async (req, res, next) => {
 
 const handleGetworkerDatarestriction = async (req, res, next) => {
         console.log("Worker Data check");
-        const { auth_datas } = req.body
+        const auth_datas = req.body[0];
      //    const uuid = req.cookies.Uid;
         const uuid = auth_datas;
         console.log("cookie",uuid);

@@ -25,7 +25,8 @@ router.get("/DeleteWorker/:hours", handleDeleteWorker);
 
 
 //Search route--- but from Profile--
-router.post('/workerData/:param', handleGetworkerDatarestriction,  handleWorkerData);
+router.post('/workerData/:param', handleGetworkerDatarestriction, handleWorkerData);
+// handleGetworkerDatarestriction
 
 // router.post("/userCreate", upload.single('Userimage'), (req, res) => {
 //         const body = req.body;

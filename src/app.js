@@ -3,19 +3,24 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3000;
-const { connectionMongodb } = require('./conection/connect')
+const { connectionMongodb } = require('./conection/connect');
 // const { userLoginrestriction } = require("../middlewareAuth/authmiddleware");
 const { userLoginrestriction } = require("./middlewareAuth/authmiddleware");
 const fileupload = require('express-fileupload');
 const cors = require("cors");
 
-// const path = require("path");
+const path = require("path");
+
+const URL = process.env.URL || "http://localhost:5678";
+
+
 
 //Route--
 // const USERrouter = require("../routers/router");
 const USERrouter = require("./routers/router");
 // const authrouter = require("../routers/authrouter");
 const authrouter = require("./routers/authrouter");
+
 
 
 //Data-base connection---
@@ -26,12 +31,20 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-        origin: ["https://hospital-patient.vercel.app"],
+        origin: [`${URL}`],
         method: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
 }));
 app.use(fileupload());
-app.use(express.static('uploads'));
+// app.use(express.static('uploads'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+
+
+
+
+
+
 
 // app.get("/", (req, res) => {
 //         app.use(express.static(path.resolve(__dirname, "my-app", "build")));
@@ -59,4 +72,7 @@ app.get("/", (req, res) => {
 
 
 app.listen(PORT, () => console.log(`Server is running on PORT:${PORT}`));
-export default app;
+
+
+
+
