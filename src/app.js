@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-        origin: [`${URL}`],
+        origin: [`https://hospital-patientvercel.vercel.app`],
         method: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
 }));
